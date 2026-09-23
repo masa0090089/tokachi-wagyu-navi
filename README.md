@@ -14,21 +14,21 @@
 
 | カテゴリ | 技術・ツール |
 | :--- | :--- |
-| **フロントエンド** | JavaScript, Thymeleaf |
+| **フロントエンド** | React (Vite), JavaScript, HTML/CSS |
 | **バックエンド** | Java, Spring Boot, Spring Security |
 | **データベース** | H2 Database |
-| **インフラ / デプロイ** | Render (クラウドサービス) |
+| **インフラ / デプロイ** | Docker, Render (クラウドサービス) |
 | **バージョン管理** | Git, GitHub |
-| **開発環境** | Gradle |
+| **開発環境** | Gradle, Node.js |
 
  ## 💡 開発した背景・動機
 実家で和牛を飼育しているというバックグラウンドがあり、日頃から身近にある「美味しい和牛の魅力」をもっと多くの人に知ってもらいたいという想いから、このアプリケーションを開発しました。
 十勝エリアの素晴らしい和牛を味わえるお店を、観光客や地元の人たちがより簡単に見つけられるようにしたいと考え、グルメ検索に特化したサービスとして形にしました。
 
 ## 🌟 主な機能
-* **十勝和牛の飲食店検索**: 十勝エリアで美味しい和牛が食べられるお店を手軽に探せます。
+**十勝和牛の飲食店検索**: 十勝エリアで美味しい和牛が食べられるお店を手軽に探せます。
 * **詳細情報・マップ連携**: お店のこだわりや位置情報をわかりやすく確認できます。
-* **レスポンシブ対応**: スマートフォンやPCなど、どの端末からでも快適に利用可能です。
+* **管理者機能**: ログインすることで、新しいメニューの追加や削除が行えます。
 
 * ## 📸 画面・機能紹介
 
@@ -101,24 +101,24 @@ erDiagram
 * **Java (JDK)**（Spring Bootの実行用）
 * **Node.js / npm**（フロントエンドの実行用）
 * **Git**（リポジトリのクローン用）
-* **VS Code** または **IntelliJ IDEA**（コード編集用）
 
 ### ⚙️ セットアップ手順
 
-1. **リポジトリのクローン**
+```bash
+# 1. リポジトリのクローン
+git clone https://github.com/masa0090089/tokachi-wagyu-navi.git
+cd tokachi-wagyu-navi
 
-   ```bash
-   git clone https://github.com/masa0090089/tokachi-wagyu-navi.git
-   cd tokachi-wagyu-navi
+# 2. フロントエンド（React）のビルド
+cd tokachi-wagyu-app
+npm install
+npm run build
+cd ..
 
-2. フロントエンドの依存関係インストールと起動
-   ```bash
-   npm install
-   npm run dev
-  ブラウザで指定されたURL（例: http://localhost:5173/ など）にアクセスして動作を確認します。 
+# 3. バックエンド（Spring Boot）の起動
+./gradlew bootRun
 
-
-
-3. バックエンド（Spring Boot）の起動
-   
-   お使いの開発環境（VS CodeやIntelliJ IDEAなど）でプロジェクトを開き、Spring Bootアプリケーションを実行します。
+# 4. ブラウザで確認
+# 以下のURLにアクセスしてください
+http://localhost:8080
+```

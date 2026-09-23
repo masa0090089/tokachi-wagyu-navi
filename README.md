@@ -10,14 +10,16 @@
 ##  アプリケーションのURL
 本番環境URL: [https://tokachi-wagyu-navi.onrender.com](https://tokachi-wagyu-navi.onrender.com)
 
-## 🛠️ 使用技術（技術スタック）
+##使用技術
 
 | カテゴリ | 技術・ツール |
 | :--- | :--- |
+| **フロントエンド** | JavaScript, Thymeleaf |
 | **バックエンド** | Java, Spring Boot, Spring Security |
-| **データベース** | H2 Database (インメモリ) |
+| **データベース** | H2 Database |
 | **インフラ / デプロイ** | Render, Docker |
 | **バージョン管理** | Git, GitHub |
+| **開発環境** | Gradle |
 
  ## 💡 開発した背景・動機
 実家で和牛を飼育しているというバックグラウンドがあり、日頃から身近にある「美味しい和牛の魅力」をもっと多くの人に知ってもらいたいという想いから、このアプリケーションを開発しました。

@@ -18,6 +18,12 @@ public class ShopController {
     @Autowired
     private ShopRepository shopRepository;
 
+    // ★追加：ルートパス（/）にアクセスされたときのお出迎えメッセージ
+    @GetMapping("/")
+    public String index() {
+        return "十勝和牛ナビ APIサーバーへようこそ！ データを見るには /shops にアクセスしてください。";
+    }
+
     @GetMapping("/shops")
     public List getAllShops() {
         return shopRepository.findAll();

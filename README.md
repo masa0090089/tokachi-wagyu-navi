@@ -10,7 +10,7 @@
 ##  アプリケーションのURL
 本番環境URL: [https://tokachi-wagyu-navi.onrender.com](https://tokachi-wagyu-navi.onrender.com)
 
-##使用技術
+##　使用技術
 
 | カテゴリ | 技術・ツール |
 | :--- | :--- |

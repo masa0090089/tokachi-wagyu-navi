@@ -13,23 +13,23 @@ public class Shop {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id; // フロントエンドが .id を使っているため shopId から id に変更
+    private Long id; // Longに変更
 
-    private String name;        // メニュー名（フロントエンドの selectedItem.name 用）
+    private String name;        // メニュー名
     private String shopName;    // お店の名前
-    private String area;        // エリア（帯広市、音更町など）
+    private String area;        // エリア
     private String shopAddress; // 店舗住所
 
     @Column(columnDefinition = "TEXT")
     private String description; // こだわり詳細
 
     private String image;       // 画像パス
-    private String price;       // 価格（価格表示をそのまま出すため String にしています）
+    private String price;       // 価格
     private String mapQuery;    // Googleマップ用
 
     // --- Getters and Setters ---
-    public Integer getId() { return id; }
-    public void setId(Integer id) { this.id = id; }
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; } // 引数もLongに変更
 
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }

@@ -1,5 +1,5 @@
 # --- ステージ1: Reactのビルド ---
-FROM node:18-alpine AS react-build
+FROM node:20-alpine AS react-build
 WORKDIR /app/tokachi-wagyu-app
 COPY tokachi-wagyu-app/package*.json ./
 RUN npm install

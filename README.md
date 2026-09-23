@@ -48,18 +48,56 @@
 
 ```mermaid
 erDiagram
-    M_SHOP ||--o{ T_MENU : "提供する"
-    M_SHOP {
-        int id PK
-        string name "店舗名"
-        string address "住所"
-        string area "エリア"
-    }
-    T_MENU {
-        int id PK
-        int shop_id FK
-        string name "メニュー名"
-        int price "価格"
-        string description "こだわり・説明"
+
+    USERS ||--o{ FAVORITES : "登録する"
+    SHOPS ||--o{ FAVORITES : "お気に入り登録される"
+
+    USERS ||--o{ STAMPS : "訪問記録を持つ"
+    SHOPS ||--o{ STAMPS : "訪問される"
+
+    USERS {
+        INT user_id PK
+        VARCHAR email
+        VARCHAR password
+        VARCHAR user_name
+        TIMESTAMP created_at
     }
 
+    PRODUCERS {
+        INT producer_id PK
+        VARCHAR producer_name
+        TEXT description
+        VARCHAR image_url
+        TIMESTAMP created_at
+    }
+
+    SHOPS {
+        INT shop_id PK
+        VARCHAR name
+        VARCHAR shop_name
+        VARCHAR area
+        VARCHAR category
+        VARCHAR shop_address
+        TEXT description
+        VARCHAR image
+        VARCHAR price
+        VARCHAR map_query
+        TIMESTAMP created_at
+    }
+
+    FAVORITES {
+        INT favorite_id PK
+        INT user_id FK
+        INT shop_id FK
+        TIMESTAMP created_at
+    }
+
+    STAMPS {
+        INT stamp_id PK
+        INT user_id FK
+        INT shop_id FK
+        DATE visited_at
+        TEXT memo
+        TIMESTAMP created_at
+    }
+```

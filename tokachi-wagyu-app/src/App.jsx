@@ -27,7 +27,7 @@ function App() {
 
   // 3. アプリが起動したときにSpring Bootから店舗データを取得する処理
   useEffect(() => {
-    fetch("http://localhost:8080/shops")
+    fetch("/shops")
       .then((response) => response.json())
       .then((data) => {
         setWagyuList(data);
@@ -110,19 +110,13 @@ function App() {
     };
 
     // バックエンド（Spring Boot）へPOSTリクエストを送信
-    fetch("http://localhost:8080/shops", {
+    fetch("/shops", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(newItem),
     })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("登録に失敗しました");
-        }
-        return response.json();
-      })
       .then((savedItem) => {
         // サーバーから返ってきたデータ（ID付きなど）をリストに追加
         setWagyuList([savedItem, ...wagyuList]);
@@ -148,7 +142,7 @@ function App() {
       return;
     }
 
-    fetch(`http://localhost:8080/shops/${id}`, {
+    fetch(`/shops/${id}`, {
       method: "DELETE",
     })
       .then((response) => {

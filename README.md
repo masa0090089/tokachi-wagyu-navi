@@ -34,8 +34,6 @@
 十勝の美味しい和牛メニューがずらりと並ぶトップページです。エリア（帯広市・音更町など）ごとの絞り込み検索や、予約・特売日カレンダー機能を使って、気になる情報を手軽にチェックできます。
 <img width="1024" height="308" alt="1f759ee4-bc0d-4564-a367-56f47653df3f" src="https://github.com/user-attachments/assets/aa75248e-a767-4288-93a6-3e842fdf53a5" />
 
-<img width="1023" height="483" alt="38467fb8-4a8a-49b2-8439-962dd5217daf" src="https://github.com/user-attachments/assets/03bcfc3c-aac2-4a66-8a2b-be63b5e4ab7a" />
-
 ### 2. 詳細画面（メニュー詳細・アクセスマップ）
 お肉のこだわりや価格、食べるお店の情報に加えて、周辺のアクセスマップが確認できる詳細ページです。
 <img width="1023" height="483" alt="38467fb8-4a8a-49b2-8439-962dd5217daf" src="https://github.com/user-attachments/assets/03bcfc3c-aac2-4a66-8a2b-be63b5e4ab7a" />

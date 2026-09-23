@@ -44,3 +44,22 @@
 管理者が店舗情報やイベント情報を更新するためのログイン画面です。テスト用アカウント情報も記載されており、スムーズに動作確認が行えます。
 <img width="1885" height="451" alt="cd2d199b-e762-4ebe-b178-399bd43a645c" src="https://github.com/user-attachments/assets/7aa581bc-cdf2-436f-ae80-3bbaa427d91f" />
 
+## 📊 ER図（データベース設計）
+
+```mermaid
+erDiagram
+    M_SHOP ||--o{ T_MENU : "提供する"
+    M_SHOP {
+        int id PK
+        string name "店舗名"
+        string address "住所"
+        string area "エリア"
+    }
+    T_MENU {
+        int id PK
+        int shop_id FK
+        string name "メニュー名"
+        int price "価格"
+        string description "こだわり・説明"
+    }
+

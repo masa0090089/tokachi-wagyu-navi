@@ -44,16 +44,14 @@
 管理者が店舗情報やイベント情報を更新するためのログイン画面です。テスト用アカウント情報も記載されており、スムーズに動作確認が行えます。
 <img width="1885" height="451" alt="cd2d199b-e762-4ebe-b178-399bd43a645c" src="https://github.com/user-attachments/assets/7aa581bc-cdf2-436f-ae80-3bbaa427d91f" />
 
-## 📊 ER図（データベース設計）
-
 ```mermaid
 erDiagram
 
-    USERS ||--o{ FAVORITES : "登録する"
-    SHOPS ||--o{ FAVORITES : "お気に入り登録される"
+    USERS ||--o{ FAVORITES : "お気に入り"
+    SHOPS ||--o{ FAVORITES : "登録"
 
-    USERS ||--o{ STAMPS : "訪問記録を持つ"
-    SHOPS ||--o{ STAMPS : "訪問される"
+    USERS ||--o{ STAMPS : "記録"
+    SHOPS ||--o{ STAMPS : "訪問"
 
     USERS {
         INT user_id PK
